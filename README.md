@@ -10,6 +10,8 @@ Built using **n8n**, this project illustrates how to connect external APIs, run 
 
 The workflow operates in 5 simple, automated steps:
 
+![n8n Workflow Structure](./flow.jpeg)
+
 ```mermaid
 graph TD
     A[Schedule Trigger] -->|Triggers Daily| B[HTTP Request: NewsAPI]
@@ -23,6 +25,8 @@ graph TD
 3. **JS Code Transformation**: Standardizes, cleans, and extracts key fields (Title, Source, Description, Date, URL) from the raw API response.
 4. **AI Summarization (Gemini)**: Uses an LLM chain powered by **Google Gemini** to summarize the news into exactly 5 concise, high-impact bullet points with emojis.
 5. **Telegram Publisher**: Automatically sends the finalized summary to your target Telegram chat or channel.
+
+   ![Telegram Output Screenshot](./telegram.jpeg)
 
 ---
 
